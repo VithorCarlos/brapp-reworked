@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/BRApp.iml" filepath="$PROJECT_DIR$/.idea/modules/BRApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/BRApp.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/BRApp.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1542622942/BRApp.react-native-community_clipboard.iml" filepath="$PROJECT_DIR$/.idea/modules/-1542622942/BRApp.react-native-community_clipboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1831347565/BRApp.react-native-safe-area-context.iml" filepath="$PROJECT_DIR$/.idea/modules/1831347565/BRApp.react-native-safe-area-context.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1552021957/BRApp.react-native-screens.iml" filepath="$PROJECT_DIR$/.idea/modules/1552021957/BRApp.react-native-screens.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/359914658/BRApp.react-native-svg.iml" filepath="$PROJECT_DIR$/.idea/modules/359914658/BRApp.react-native-svg.iml" />
+    </modules>
+  </component>
+</project>
