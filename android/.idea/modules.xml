@@ -4,10 +4,16 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/BRApp.iml" filepath="$PROJECT_DIR$/.idea/modules/BRApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/BRApp.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/BRApp.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-678652854/BRApp.react-native-code-push.iml" filepath="$PROJECT_DIR$/.idea/modules/-678652854/BRApp.react-native-code-push.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1542622942/BRApp.react-native-community_clipboard.iml" filepath="$PROJECT_DIR$/.idea/modules/-1542622942/BRApp.react-native-community_clipboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/177485287/BRApp.react-native-firebase_app.iml" filepath="$PROJECT_DIR$/.idea/modules/177485287/BRApp.react-native-firebase_app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/447226289/BRApp.react-native-firebase_firestore.iml" filepath="$PROJECT_DIR$/.idea/modules/447226289/BRApp.react-native-firebase_firestore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/863796740/BRApp.react-native-gesture-handler.iml" filepath="$PROJECT_DIR$/.idea/modules/863796740/BRApp.react-native-gesture-handler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1483747862/BRApp.react-native-linear-gradient.iml" filepath="$PROJECT_DIR$/.idea/modules/1483747862/BRApp.react-native-linear-gradient.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/1831347565/BRApp.react-native-safe-area-context.iml" filepath="$PROJECT_DIR$/.idea/modules/1831347565/BRApp.react-native-safe-area-context.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/1552021957/BRApp.react-native-screens.iml" filepath="$PROJECT_DIR$/.idea/modules/1552021957/BRApp.react-native-screens.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/359914658/BRApp.react-native-svg.iml" filepath="$PROJECT_DIR$/.idea/modules/359914658/BRApp.react-native-svg.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/810964535/BRApp.react-native-webview.iml" filepath="$PROJECT_DIR$/.idea/modules/810964535/BRApp.react-native-webview.iml" />
     </modules>
   </component>
 </project>

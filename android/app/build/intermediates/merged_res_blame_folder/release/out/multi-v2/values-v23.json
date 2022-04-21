@@ -4,37 +4,7 @@
             "outputFile": "/home/vithor/development/github.com/brapp/android/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-v23/values-v23.xml",
             "map": [
                 {
-                    "source": "/home/vithor/.gradle/wrapper/dists/gradle-7.2-all/caches/transforms-3/1cd632fed91047f864aa5fc02240525c/transformed/appcompat-1.1.0/res/values-v23/values-v23.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,20,34,35,36,37,41,42,43,44",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,190,325,400,487,1371,2267,2386,2513,2618,2842,2957,3064,3177",
-                        "endLines": "2,3,4,5,19,33,34,35,36,40,41,42,43,47",
-                        "endColumns": "134,134,74,86,12,12,118,126,104,12,114,106,112,12",
-                        "endOffsets": "185,320,395,482,1366,2262,2381,2508,2613,2837,2952,3059,3172,3402"
-                    }
-                },
-                {
-                    "source": "/home/vithor/.gradle/wrapper/dists/gradle-7.2-all/caches/transforms-3/378f8d1f5d9e8f2dccf5622b520d15a5/transformed/cardview-1.0.0/res/values-v23/values-v23.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "4",
-                        "endColumns": "12",
-                        "endOffsets": "200"
-                    },
-                    "to": {
-                        "startLines": "48",
-                        "startColumns": "4",
-                        "startOffsets": "3407",
-                        "endLines": "50",
-                        "endColumns": "12",
-                        "endOffsets": "3552"
-                    }
-                },
-                {
-                    "source": "/home/vithor/.gradle/wrapper/dists/gradle-7.2-all/caches/transforms-3/7c0c7e113c074df493b9385345dc4b6b/transformed/material-1.1.0/res/values-v23/values-v23.xml",
+                    "source": "/home/vithor/.gradle/caches/transforms-3/a05d2154a78a0f6c1080ad9094eb345e/transformed/material-1.1.0/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2,6",
                         "startColumns": "4,4",
@@ -44,12 +14,42 @@
                         "endOffsets": "315,588"
                     },
                     "to": {
-                        "startLines": "51,55",
+                        "startLines": "53,57",
                         "startColumns": "4,4",
-                        "startOffsets": "3557,3822",
-                        "endLines": "54,58",
+                        "startOffsets": "3674,3939",
+                        "endLines": "56,60",
                         "endColumns": "10,10",
-                        "endOffsets": "3817,4090"
+                        "endOffsets": "3934,4207"
+                    }
+                },
+                {
+                    "source": "/home/vithor/.gradle/caches/transforms-3/5b0919237b8437e92b888fd72f4fccec/transformed/cardview-1.0.0/res/values-v23/values-v23.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "4",
+                        "endColumns": "12",
+                        "endOffsets": "200"
+                    },
+                    "to": {
+                        "startLines": "50",
+                        "startColumns": "4",
+                        "startOffsets": "3524",
+                        "endLines": "52",
+                        "endColumns": "12",
+                        "endOffsets": "3669"
+                    }
+                },
+                {
+                    "source": "/home/vithor/.gradle/caches/transforms-3/ac9bf0556696ff95429cff7cf5d597e5/transformed/appcompat-1.2.0/res/values-v23/values-v23.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,20,34,35,36,39,43,44,45,46",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,190,325,400,487,1371,2267,2386,2513,2735,2959,3074,3181,3294",
+                        "endLines": "2,3,4,5,19,33,34,35,38,42,43,44,45,49",
+                        "endColumns": "134,134,74,86,12,12,118,126,12,12,114,106,112,12",
+                        "endOffsets": "185,320,395,482,1366,2262,2381,2508,2730,2954,3069,3176,3289,3519"
                     }
                 }
             ]

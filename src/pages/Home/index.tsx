@@ -1,73 +1,99 @@
-import React, { useEffect, useState } from 'react';
-import { useNavigation } from '@react-navigation/native';
-import { Background } from '../../component/Background';
-import { TextBold, TextSemiBold, TextRegular } from '../../component/TextHeading';
-import CarSvg from '../../assets/images/carro-esporte.svg'
+import React from "react";
+import { useNavigation } from "@react-navigation/native";
+import { Background } from "../../component/Background";
+import { ScrollView } from "react-native";
+import {
+  TextBold,
+  TextSemiBold,
+  TextRegular,
+} from "../../component/TextHeading";
+import CarSvg from "../../assets/images/carro-esporte.svg";
 import {
   Container,
-  Content,
   Footer,
   Description,
   ActionButton,
-  ImageContent
-} from './styles';
-import { Dimensions, ScrollView } from 'react-native';
-import { width, height } from '../../global/styles/responsive';
+  ImageContent,
+} from "./styles";
+import FontSize, {
+  heightPercentageToDP,
+  widthPercentageToDP,
+} from "../../global/styles/responsive";
+import * as Animatable from "react-native-animatable";
+import { ModalHasUpdate } from "../../component/ModalHasUpdate";
+import { getStatusBarHeight } from "react-native-iphone-x-helper";
 
-export function Home() {
+export const Home = () => {
   const navigation = useNavigation();
-  const [test, setTest] = useState(Boolean);
-
-  Dimensions.addEventListener('change', ({ screen }) => {
-    if (screen.width > screen.height) {
-      setTest(true);
-    } else {
-      setTest(false);
-    }
-  });
 
   return (
     <Background>
-      <Container>
-        <ScrollView showsVerticalScrollIndicator={false}>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{ flexGrow: 1 }}
+      >
+        <Container>
+          <Animatable.View
+            useNativeDriver
+            animation="bounceIn"
+            direction="alternate"
+            duration={4000}
+            style={{
+              marginTop: getStatusBarHeight() + widthPercentageToDP(5),
+            }}
+          >
+            <TextBold fontSize={FontSize(30)}>Olá</TextBold>
 
-          <Content isLandscape={test}>
-            <TextBold fontSize={35}>
-              Olá
-            </TextBold>
-
-            <TextSemiBold fontSize={25}>
+            <TextSemiBold fontSize={FontSize(22)}>
               Seja bem-vindo(a) ao BRApp.
             </TextSemiBold>
 
             <Description>
-              <TextRegular fontSize={18} lineHeight={20}>
-                Aqui é possível realizar consultas precisas {'\n'}
-                sobre o preço médio do veículo baseado na {'\n'}
+              <TextRegular fontSize={FontSize(16)}>
+                Aqui é possível realizar consultas precisas {"\n"}
+                sobre o preço médio do veículo conforme a {"\n"}
                 tabela FIPE.
               </TextRegular>
             </Description>
-          </Content>
+          </Animatable.View>
 
-          <ImageContent>
-            <CarSvg width={width - 26} height={width - 26} />
-          </ImageContent>
+          <Animatable.View
+            useNativeDriver
+            animation="bounceIn"
+            direction="alternate"
+            duration={4000}
+            style={{ marginVertical: heightPercentageToDP(10) }}
+          >
+            <ImageContent>
+              <CarSvg
+                width={widthPercentageToDP(90)}
+                height={widthPercentageToDP(90)}
+              />
+            </ImageContent>
+          </Animatable.View>
 
           <Footer>
-            <ActionButton
-              activeOpacity={0.7}
-              onPress={() => navigation.navigate('CategorySelect', {
-                titleBreadcrumb: 'Veiculos'
-              })}
+            <Animatable.View
+              useNativeDriver
+              animation="bounceIn"
+              direction="alternate"
+              duration={4000}
             >
-              <TextBold fontSize={18}>
-                COMEÇAR CONSULTAS
-              </TextBold>
-            </ActionButton>
+              <ActionButton
+                activeOpacity={0.7}
+                onPress={() =>
+                  navigation.navigate("CategorySelect", {
+                    titulo: "Veiculos",
+                  })
+                }
+              >
+                <TextBold fontSize={FontSize(16)}>COMEÇAR CONSULTAS</TextBold>
+              </ActionButton>
+            </Animatable.View>
           </Footer>
-        </ScrollView>
-      </Container>
-
+          <ModalHasUpdate />
+        </Container>
+      </ScrollView>
     </Background>
   );
-}
+};

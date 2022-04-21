@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">BRApp</string>
+    <string moduleConfig="true" name="CodePushDeploymentKey">Meg7DQoziLiBPyFCbTyNP2AbhLAnT1x9NhCRx</string>
 </resources>

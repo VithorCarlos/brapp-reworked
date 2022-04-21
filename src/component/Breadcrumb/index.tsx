@@ -1,36 +1,35 @@
-import React from 'react';
-import { TextSemiBold } from '../TextHeading';
-import { theme } from '../../global/styles/theme';
-import { BreadcrumbProps, Container } from './styles';
-import { IVehicle } from '../../hooks/context';
+import React from "react";
+import { TextSemiBold } from "../TextHeading";
+import { theme } from "../../global/styles/theme";
+import { BreadcrumbProps, Container } from "./styles";
+import { IVehicle } from "../../hooks/vehicleContext";
+import { width } from "../../global/styles/responsive";
 
-export interface IParams extends BreadcrumbProps{
-  vehicle?: IVehicle;
+export interface IParams extends BreadcrumbProps {
   titleBreadcrumb: string;
-  vehicleBreadcrumb?: string;
+  categoryBreadcrumb?: string;
   brandBreadcrumb?: string;
   modelBreadcrumb?: string;
   yearBreadcrumb?: string;
 }
 
-export function Breadcrumb({ 
-   titleBreadcrumb, 
-   vehicleBreadcrumb,  
-   brandBreadcrumb,
-   modelBreadcrumb,
-   yearBreadcrumb,
-  ...rest}: IParams
-
-   ){ 
+export function Breadcrumb({
+  titleBreadcrumb,
+  categoryBreadcrumb,
+  brandBreadcrumb,
+  modelBreadcrumb,
+  yearBreadcrumb,
+  ...rest
+}: IParams) {
   return (
     <Container {...rest}>
-        <TextSemiBold fontSize={16} color={theme.colors.heading_light}>
-            {titleBreadcrumb ? titleBreadcrumb + '>' : ''} 
-            {vehicleBreadcrumb ? vehicleBreadcrumb + '>' : ''} 
-            {brandBreadcrumb ? brandBreadcrumb + '>' : ''} 
-            {modelBreadcrumb ? modelBreadcrumb + '>' : ''}
-            {yearBreadcrumb}
-        </TextSemiBold>
+      <TextSemiBold fontSize={width * 0.042} color={theme.colors.heading_light}>
+        {titleBreadcrumb ? titleBreadcrumb + ">" : ""}
+        {categoryBreadcrumb ? categoryBreadcrumb + ">" : ""}
+        {brandBreadcrumb ? brandBreadcrumb + ">" : ""}
+        {modelBreadcrumb ? modelBreadcrumb + ">" : ""}
+        {yearBreadcrumb}
+      </TextSemiBold>
     </Container>
   );
 }

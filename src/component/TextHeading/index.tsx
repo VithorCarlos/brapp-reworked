@@ -1,7 +1,13 @@
-import React, {ReactNode} from 'react';
-import { TextBoldCss, TextSemiBoldCss, TextRegularCss, TextLightCss } from './styles';
+import React, { ReactNode } from "react";
+import { TextProps } from "react-native";
+import {
+  TextBoldCss,
+  TextSemiBoldCss,
+  TextRegularCss,
+  TextLightCss,
+} from "./styles";
 
-interface Props {
+interface Props extends TextProps {
   children: ReactNode;
   color?: string;
   fontSize: number;
@@ -9,68 +15,111 @@ interface Props {
   outline?: boolean;
   textAlign?: string;
   marginBottom?: number;
+  textShadow?: boolean;
 }
 
-export function TextBold({children, color, fontSize, lineHeight, outline, textAlign, marginBottom}: Props) {
+export function TextBold({
+  children,
+  color,
+  fontSize,
+  lineHeight,
+  outline,
+  textAlign,
+  marginBottom,
+  textShadow,
+  ...rest
+}: Props) {
   return (
-    <TextBoldCss 
+    <TextBoldCss
       color={color}
       fontSize={fontSize}
       outline={outline}
-      textAlign={textAlign} 
+      textAlign={textAlign}
       marginBottom={marginBottom}
-      style={{lineHeight: lineHeight}}
+      style={{ lineHeight: lineHeight }}
+      textShadow={textShadow}
+      {...rest}
     >
       {children}
     </TextBoldCss>
   );
 }
 
-export function TextSemiBold(
-  {children, color, fontSize, lineHeight, outline, textAlign, marginBottom}
-  : Props) {
+export function TextSemiBold({
+  children,
+  color,
+  fontSize,
+  lineHeight,
+  outline,
+  textAlign,
+  marginBottom,
+  textShadow,
+  ...rest
+}: Props) {
   return (
     <TextSemiBoldCss
       color={color}
       fontSize={fontSize}
       outline={outline}
-      textAlign={textAlign} 
+      textAlign={textAlign}
       marginBottom={marginBottom}
-      style={{lineHeight: lineHeight}}
+      style={{ lineHeight: lineHeight }}
+      textShadow={textShadow}
+      {...rest}
     >
       {children}
     </TextSemiBoldCss>
   );
 }
 
-export function TextRegular(
-  {children, color, fontSize, lineHeight, outline, textAlign, marginBottom}
-  : Props) {
+export function TextRegular({
+  children,
+  color,
+  fontSize,
+  lineHeight,
+  outline,
+  textAlign,
+  marginBottom,
+  textShadow,
+  ...rest
+}: Props) {
   return (
     <TextRegularCss
       color={color}
       fontSize={fontSize}
       outline={outline}
-      textAlign={textAlign} 
+      textAlign={textAlign}
       marginBottom={marginBottom}
-      style={{lineHeight: lineHeight}}
+      style={{ lineHeight: lineHeight }}
+      textShadow={textShadow}
+      {...rest}
     >
       {children}
     </TextRegularCss>
   );
 }
 
-export function TextLight(
-  {children, color, fontSize, lineHeight, outline, textAlign, marginBottom}
-  : Props) {
+export function TextLight({
+  children,
+  color,
+  fontSize,
+  lineHeight,
+  outline,
+  textAlign,
+  marginBottom,
+  textShadow,
+  ...rest
+}: Props) {
   return (
     <TextLightCss
       color={color}
       fontSize={fontSize}
       outline={outline}
-      textAlign={textAlign} 
+      textAlign={textAlign}
       marginBottom={marginBottom}
-      style={{lineHeight: lineHeight}}
+      style={{ lineHeight: lineHeight }}
+      textShadow={textShadow}
+      {...rest}
     >
       {children}
     </TextLightCss>

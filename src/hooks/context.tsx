@@ -32,19 +32,24 @@ export const VehicleContext = createContext({} as IVehicle);
 
 export function VehicleProvider({children}: VehicleProviderProps) { 
     function replaceCase(name: string) {
-        return name.toLowerCase() 
-        .normalize('NFD')
-        .replace(/[\u0300-\u036f]/g, "")
-        .toLowerCase();
+        if (name !== undefined){
+            return name.toLowerCase() 
+            .normalize('NFD')
+            .replace(/[\u0300-\u036f]/g, "")
+            .toLowerCase();
+        }
       }
 
       function toTitleCase(name: string) {
-        return name.replace(
-          /\w\S*/g,
-          function(name) {
-            return name.charAt(0).toUpperCase() + name.substring(1).toLowerCase();
-          }
-        );
+        if (name !== undefined){
+            return name.replace(
+                /\w\S*/g,
+                function(name) {
+                  return name.charAt(0).toUpperCase() + name.substring(1).toLowerCase();
+                }
+              );
+        }
+        
       }
 
     return (
