@@ -4,7 +4,7 @@
     <facet type="android-gradle" name="Android-Gradle">
       <configuration>
         <option name="GRADLE_PROJECT_PATH" value=":react-native-safe-area-context" />
-        <option name="LAST_SUCCESSFUL_SYNC_AGP_VERSION" />
+        <option name="LAST_SUCCESSFUL_SYNC_AGP_VERSION" value="4.2.2" />
         <option name="LAST_KNOWN_AGP_VERSION" value="4.2.2" />
       </configuration>
     </facet>
@@ -25,6 +25,30 @@
         <option name="PROJECT_TYPE" value="1" />
       </configuration>
     </facet>
+    <facet type="kotlin-language" name="Kotlin">
+      <configuration version="4" platform="JVM 1.8" allPlatforms="JVM [1.8]" useProjectSettings="false">
+        <compilerSettings>
+          <option name="additionalArguments" value="-Xallow-no-source-files" />
+        </compilerSettings>
+        <compilerArguments>
+          <option name="destination" value="$MODULE_DIR$/../../../../node_modules/react-native-safe-area-context/android/build/tmp/kotlin-classes/debug" />
+          <option name="classpath" value="$MODULE_DIR$/../../../../node_modules/react-native-safe-area-context/android/build/intermediates/compile_r_class_jar/debug/R.jar:/home/vithor/.gradle/caches/transforms-3/0e0e48696caad1aa1aba8aab4df9b021/transformed/jetified-react-native-0.67.3-api.jar:/home/vithor/.gradle/caches/transforms-3/5fe4d425e5473906651ae2c75e23dfb9/transformed/jetified-infer-annotation-0.18.0.jar:/home/vithor/.gradle/caches/transforms-3/87513e3a73a3a7a0539efcfb38d23aba/transformed/jetified-jsr305-3.0.2.jar:/home/vithor/.gradle/caches/transforms-3/763daffcc892125aeb67162d93747991/transformed/jetified-kotlin-annotations-jvm-1.3.72.jar:/home/vithor/.gradle/caches/transforms-3/202deb844615a3ec43375f120dc14a4b/transformed/jetified-proguard-annotations-1.19.0.jar:/home/vithor/.gradle/caches/transforms-3/795774d75ed163ed1c30398f6ca9dc91/transformed/jetified-javax.inject-1.jar:/home/vithor/.gradle/caches/transforms-3/17a684e96de76f32424b3ee4a5f6081b/transformed/appcompat-1.0.2-api.jar:/home/vithor/.gradle/caches/transforms-3/21beb78b0b288ac54c85b4843d420d34/transformed/fragment-1.0.0-api.jar:/home/vithor/.gradle/caches/transforms-3/521f6cef4dfcb442576407a0eda4efc9/transformed/vectordrawable-animated-1.0.0-api.jar:/home/vithor/.gradle/caches/transforms-3/86398581463b5a50bae9b2614e338dd0/transformed/legacy-support-core-ui-1.0.0-api.jar:/home/vithor/.gradle/caches/transforms-3/f1d3948babd3b34ad2f88f6ec3a5d3d3/transformed/swiperefreshlayout-1.0.0-api.jar:/home/vithor/.gradle/caches/transforms-3/76d48189cf915423145b750ca9ea88e6/transformed/legacy-support-core-utils-1.0.0-api.jar:/home/vithor/.gradle/caches/transforms-3/d3342cc4029aa215e915f75c87e2ab5d/transformed/vectordrawable-1.0.1-api.jar:/home/vithor/.gradle/caches/transforms-3/42daf9482d0e78bbc517ae5d000e0f9b/transformed/loader-1.0.0-api.jar:/home/vithor/.gradle/caches/transforms-3/a628bf378506e73886f2b2b1d83e1289/transformed/viewpager-1.0.0-api.jar:/home/vithor/.gradle/caches/transforms-3/bf254a1407ee91970585ff8870c7f756/transformed/coordinatorlayout-1.0.0-api.jar:/home/vithor/.gradle/caches/transforms-3/d9ca1ac39464c8ef24f42807cf36a87c/transformed/drawerlayout-1.0.0-api.jar:/home/vithor/.gradle/caches/transforms-3/e94f7a8938d76e6296bd15947a6339e3/transformed/slidingpanelayout-1.0.0-api.jar:/home/vithor/.gradle/caches/transforms-3/0f8d50c89627d5ce36d861ec00e91804/transformed/customview-1.0.0-api.jar:/home/vithor/.gradle/caches/transforms-3/16e458d3f88d5987e139303bc4bf9e3a/transformed/asynclayoutinflater-1.0.0-api.jar:/home/vithor/.gradle/caches/transforms-3/14981e53a4740fb9f89ed50a91812536/transformed/core-1.1.0-api.jar:/home/vithor/.gradle/caches/transforms-3/b9ed56811780f19f0b250a69ba367630/transformed/versionedparcelable-1.1.0-api.jar:/home/vithor/.gradle/caches/modules-2/files-2.1/androidx.collection/collection/1.0.0/42858b26cafdaa69b6149f45dfc2894007bc2c7a/collection-1.0.0.jar:/home/vithor/.gradle/caches/transforms-3/8aa4a09cbd69c32194462eaf82fda345/transformed/cursoradapter-1.0.0-api.jar:/home/vithor/.gradle/caches/transforms-3/2d674e63d3be0279acc4bf22f4976473/transformed/interpolator-1.0.0-api.jar:/home/vithor/.gradle/caches/transforms-3/3aa587f9b2134697deb758172f482f85/transformed/documentfile-1.0.0-api.jar:/home/vithor/.gradle/caches/transforms-3/7637448f56bfcd11d724ad5bd96c94ec/transformed/localbroadcastmanager-1.0.0-api.jar:/home/vithor/.gradle/caches/transforms-3/840f121c9c52d9ad4af0ee5ddcd5f399/transformed/print-1.0.0-api.jar:/home/vithor/.gradle/caches/transforms-3/4e5ae0882f2186b3158ba277ee4ddad5/transformed/lifecycle-viewmodel-2.0.0-api.jar:/home/vithor/.gradle/caches/transforms-3/3772c9bf73502bb72294b5684b31024e/transformed/lifecycle-runtime-2.0.0-api.jar:/home/vithor/.gradle/caches/transforms-3/06e546ef6f93b3259ed3fb53a51718e4/transformed/lifecycle-livedata-2.0.0-api.jar:/home/vithor/.gradle/caches/transforms-3/4eb500890ec197146c2c63e4200001a3/transformed/lifecycle-livedata-core-2.0.0-api.jar:/home/vithor/.gradle/caches/transforms-3/9d2b7fb17705c34594f7121d27bb32bc/transformed/core-runtime-2.0.0-api.jar:/home/vithor/.gradle/caches/modules-2/files-2.1/androidx.arch.core/core-common/2.0.0/bb21b9a11761451b51624ac428d1f1bb5deeac38/core-common-2.0.0.jar:/home/vithor/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common/2.0.0/e070ffae07452331bc5684734fce6831d531785c/lifecycle-common-2.0.0.jar:/home/vithor/.gradle/caches/modules-2/files-2.1/androidx.annotation/annotation/1.1.0/e3a6fb2f40e3a3842e6b7472628ba4ce416ea4c8/annotation-1.1.0.jar:/home/vithor/.gradle/caches/transforms-3/3daee4919d5d74a34b6299d6ddc8e0f0/transformed/jetified-autofill-1.1.0-api.jar:/home/vithor/.gradle/caches/transforms-3/91abd4492174cec2c8e494916688b91d/transformed/jetified-fresco-2.5.0-api.jar:/home/vithor/.gradle/caches/transforms-3/3998aabb8b952f965bf0924be9d2bc3f/transformed/jetified-fbcore-2.5.0-api.jar:/home/vithor/.gradle/caches/transforms-3/8e0de90eb526dbbf98c89aa00403f26d/transformed/jetified-soloader-0.10.1-api.jar:/home/vithor/.gradle/caches/transforms-3/b5bd6582ef818c08fc842102de2e47e7/transformed/jetified-annotation-0.10.1.jar:/home/vithor/.gradle/caches/transforms-3/51e7903a27bbf3f1bb3fdac07f2fa34a/transformed/jetified-nativeloader-0.10.1.jar:/home/vithor/.gradle/caches/transforms-3/5ac16bc5d9cc875fdc62ce317d436bb8/transformed/jetified-ui-common-2.5.0-api.jar:/home/vithor/.gradle/caches/transforms-3/b32cfae0024e466e65da5f1b30050f9e/transformed/jetified-drawee-2.5.0-api.jar:/home/vithor/.gradle/caches/transforms-3/a312c6b914b71a89a3b1a01d6bce7ca7/transformed/jetified-imagepipeline-2.5.0-api.jar:/home/vithor/.gradle/caches/transforms-3/2b77fa2c69dcc5e8d94cf946902b2578/transformed/jetified-imagepipeline-base-2.5.0-api.jar:/home/vithor/.gradle/caches/transforms-3/1496d723fd8f74f4c706e9bdafa8705f/transformed/jetified-imagepipeline-native-2.5.0-api.jar:/home/vithor/.gradle/caches/transforms-3/bb6d6aec8212d0d9af7e59c702949db5/transformed/jetified-memory-type-ashmem-2.5.0-api.jar:/home/vithor/.gradle/caches/transforms-3/3f8e7cdfc570ecf43b72bbb44b1fb660/transformed/jetified-memory-type-native-2.5.0-api.jar:/home/vithor/.gradle/caches/transforms-3/eadde558688bce8324ea7ac6d3331250/transformed/jetified-memory-type-java-2.5.0-api.jar:/home/vithor/.gradle/caches/transforms-3/d0a3a2a8a78bc4ac26d87cbaad180962/transformed/jetified-nativeimagefilters-2.5.0-api.jar:/home/vithor/.gradle/caches/transforms-3/34dbedfea22fa123a5b8a90bd0978d1b/transformed/jetified-nativeimagetranscoder-2.5.0-api.jar:/home/vithor/.gradle/caches/transforms-3/4f731e64735d081373bdc9c21a5e9529/transformed/jetified-imagepipeline-okhttp3-2.5.0-api.jar:/home/vithor/.gradle/caches/transforms-3/46a89ee0aa03953461d9084d4edca828/transformed/jetified-okhttp-urlconnection-4.9.2.jar:/home/vithor/.gradle/caches/transforms-3/85a175d70551d7e5956f3ad42d339b7f/transformed/jetified-okhttp-4.9.2.jar:/home/vithor/.gradle/caches/transforms-3/67742d5771ad38469290c4a4ffac13e0/transformed/jetified-okio-jvm-2.9.0.jar:/home/vithor/.gradle/caches/transforms-3/e040761c8fb047450b587f26ffc41f6f/transformed/jetified-kotlin-stdlib-jdk8-1.4.10.jar:/home/vithor/.gradle/caches/transforms-3/3827da9d5e9dde02ed404ff9eabc87fc/transformed/jetified-kotlin-stdlib-jdk7-1.4.10.jar:/home/vithor/.gradle/caches/transforms-3/e115374e30a1f7396c9ed1b5b94d85a0/transformed/jetified-kotlin-stdlib-1.6.10.jar:/home/vithor/.gradle/caches/transforms-3/a15b94ab4b6ae70eee52e3db3273048d/transformed/jetified-annotations-13.0.jar:/home/vithor/.gradle/caches/transforms-3/a831348404dcf8b617273d52a45659cc/transformed/jetified-kotlin-stdlib-common-1.6.10.jar:/home/vithor/.gradle/caches/transforms-3/271773aa56ae7c6f1886aae81e8fe61f/transformed/jetified-fbjni-java-only-0.2.2.jar:/home/vithor/Android/Sdk/platforms/android-30/android.jar:/home/vithor/Android/Sdk/build-tools/30.0.2/core-lambda-stubs.jar" />
+          <option name="noStdlib" value="true" />
+          <option name="moduleName" value="react-native-safe-area-context_debug" />
+          <option name="languageVersion" value="1.6" />
+          <option name="apiVersion" value="1.6" />
+          <option name="pluginOptions">
+            <array />
+          </option>
+          <option name="pluginClasspaths">
+            <array />
+          </option>
+          <option name="errors">
+            <ArgumentParseErrors />
+          </option>
+        </compilerArguments>
+      </configuration>
+    </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output url="file://$MODULE_DIR$/../../../../node_modules/react-native-safe-area-context/android/build/intermediates/javac/debug/classes" />
@@ -34,7 +58,15 @@
       <sourceFolder url="file://$MODULE_DIR$/../../../../node_modules/react-native-safe-area-context/android/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../../../node_modules/react-native-safe-area-context/android/src/paper/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../../../node_modules/react-native-safe-area-context/android/build/generated/ap_generated_sources/debug/out" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../../node_modules/react-native-safe-area-context/android/build/generated/ap_generated_sources/debug/out" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../../node_modules/react-native-safe-area-context/android/build/generated/ap_generated_sources/debug/out" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../../node_modules/react-native-safe-area-context/android/build/generated/ap_generated_sources/debug/out" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../../node_modules/react-native-safe-area-context/android/build/generated/ap_generated_sources/debug/out" isTestSource="false" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../../../node_modules/react-native-safe-area-context/android/build/generated/res/resValues/debug" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../../node_modules/react-native-safe-area-context/android/build/generated/source/buildConfig/debug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../../node_modules/react-native-safe-area-context/android/build/generated/source/buildConfig/debug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../../node_modules/react-native-safe-area-context/android/build/generated/source/buildConfig/debug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../../node_modules/react-native-safe-area-context/android/build/generated/source/buildConfig/debug" isTestSource="false" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../../../node_modules/react-native-safe-area-context/android/build/generated/source/buildConfig/debug" isTestSource="false" generated="true" />
       <excludeFolder url="file://$MODULE_DIR$/../../../../node_modules/react-native-safe-area-context/android/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/../../../../node_modules/react-native-safe-area-context/android/build" />
@@ -57,9 +89,9 @@
     <orderEntry type="library" name="Gradle: com.squareup.okio:okio:2.9.0" level="project" />
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.4.10" level="project" />
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.4.10" level="project" />
-    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.4.10" level="project" />
-    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.4.10" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.10" level="project" />
     <orderEntry type="library" name="Gradle: org.jetbrains:annotations:13.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10" level="project" />
     <orderEntry type="library" name="Gradle: com.facebook.fbjni:fbjni-java-only:0.2.2" level="project" />
     <orderEntry type="library" name="Gradle: com.facebook.react:react-native:0.67.3@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.appcompat:appcompat:1.0.2@aar" level="project" />

@@ -4,7 +4,7 @@
             "outputFile": "/home/vithor/development/github.com/brapp/android/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-port/values-port.xml",
             "map": [
                 {
-                    "source": "/home/vithor/.gradle/wrapper/dists/gradle-7.2-all/caches/transforms-3/1cd632fed91047f864aa5fc02240525c/transformed/appcompat-1.1.0/res/values-port/values-port.xml",
+                    "source": "/home/vithor/.gradle/caches/transforms-3/ac9bf0556696ff95429cff7cf5d597e5/transformed/appcompat-1.2.0/res/values-port/values-port.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -1,21 +1,28 @@
-import { View } from 'react-native';
-import { theme } from '../../global/styles/theme';
-import styled from 'styled-components';
+import { View } from "react-native";
+import { theme } from "../../global/styles/theme";
+import styled from "styled-components";
+import { width, widthPercentageToDP } from "../../global/styles/responsive";
 interface Props {
-    toggle?: boolean;
+  toggle?: boolean;
 }
 
-const { primary ,secondary } = theme.colors;
+const { secondary, secondary_selected } = theme.colors;
 
 export const Content = styled(View)`
-    background-color: ${(props: Props) => props.toggle ? primary : secondary};;
-    border-radius: 10px;
-    border-width: 2px;
-    border-color: ${(props: Props) => props.toggle ? secondary : 'transparent'};
-    align-items: center;
-    justify-content: center;
-    width: 110px;
-    height: 100px;
-    margin-right: 20px;
-    max-width: 110px
+  background-color: ${(props: Props) =>
+    props.toggle ? secondary_selected : secondary};
+  border-radius: ${widthPercentageToDP(3)}px;
+  border-width: 2px;
+  border-color: ${(props: Props) => (props.toggle ? secondary : "transparent")};
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width: ${widthPercentageToDP(34)}px;
+  padding-vertical: ${widthPercentageToDP(4)}px;
+  padding-horizontal: ${widthPercentageToDP(2)}px;
+  margin-right: ${width * 0.043}px;
+`;
+
+export const Spacer = styled(View)`
+  margin-vertical: ${widthPercentageToDP(0.6)}px;
 `;

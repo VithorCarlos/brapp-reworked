@@ -1,87 +1,108 @@
-import { useNavigation, useRoute } from '@react-navigation/native';
-import React, { useEffect, useState } from 'react';
-import { ActivityIndicator, FlatList, KeyboardAvoidingView, Platform, ScrollView, TouchableOpacity, View } from 'react-native';
-import { Background } from '../../component/Background';
-import { Breadcrumb, IParams } from '../../component/Breadcrumb';
-import { Button } from '../../component/Button';
-import { ButtonAdd } from '../../component/ButtonAdd';
-import { SearchBar } from '../../component/SearchBar';
-import { TextBold, TextRegular, TextSemiBold } from '../../component/TextHeading';
-import { theme } from '../../global/styles/theme';
-import { IVehicle, useAuth } from '../../hooks/context';
-import { api } from '../../services/api';
-import { Container, Footer, ModelVehicle } from './styles';
+import { useNavigation, useRoute } from "@react-navigation/native";
+import React, { useEffect, useState } from "react";
+import {
+  FlatList,
+  KeyboardAvoidingView,
+  Platform,
+  ScrollView,
+  View,
+} from "react-native";
+import LinearGradient from "react-native-linear-gradient";
+import { createShimmerPlaceholder } from "react-native-shimmer-placeholder";
+import { Background } from "../../component/Background";
+import { Breadcrumb } from "../../component/Breadcrumb";
+import { Button } from "../../component/Button";
+import { ButtonAdd } from "../../component/ButtonAdd";
+import { SearchBar } from "../../component/SearchBar";
+import {
+  TextBold,
+  TextRegular,
+  TextSemiBold,
+} from "../../component/TextHeading";
+import FontSize, { widthPercentageToDP } from "../../global/styles/responsive";
+import { theme } from "../../global/styles/theme";
+import { IVehicle, useVehicleAuth } from "../../hooks/vehicleContext";
+import { api } from "../../services/api";
+import { Footer, ModelVehicle, SearchContent } from "./styles";
 
 export function VehicleModel() {
   const route = useRoute();
-  const params = route.params as IParams;
+  const params = route.params as IVehicle;
+  const ShimmerPlaceholder = createShimmerPlaceholder(LinearGradient);
   const navigation = useNavigation();
-  const [model, setModel] = useState('');
+  const [model, setModel] = useState("");
   const [modelData, setModelData] = useState([]);
-  const [codeModel, setCodeModel] = useState('');
+  const [modelName, setModelName] = useState("");
+  const [idModel, setIdModel] = useState("");
   const [disabled, setDisabled] = useState(true);
   const [vehicleData, setVehicleData] = useState<IVehicle>({} as IVehicle);
-  const [selectModel, setSelectModel] = useState<any>('');
+  const [selectModel, setSelectModel] = useState<any>("");
   const [loading, setLoading] = useState(true);
+  const [loadingVisible, setLoadingVisible] = useState(false);
   const [filterItem, setFilterItem] = useState<IVehicle>([]);
+  const { secondary, secondary_load } = theme.colors;
 
-  const { replaceCase, toTitleCase } = useAuth();
+  const { replaceCase, toTitleCase } = useVehicleAuth();
 
+  const load = async (category: any, idBrand: any) => {
+    try {
+      const { data } = await api.get(`/${category}/marcas/${idBrand}/modelos`);
+      if (data !== "") {
+        setLoading(false);
+        setTimeout(() => setLoadingVisible(!loadingVisible), 1000);
+      }
 
-  async function load(vehicle: any, codeBrandVehicle: any) {
-    const { data } = await api.get(`/${vehicle}/marcas/${codeBrandVehicle}/modelos`);
-    if (data !== '') {
-      setLoading(false);
       return setVehicleData(data.modelos);
+    } catch (error) {
+      console.log(error);
     }
-
-  }
+  };
 
   const handleSearchFilter = (text: string) => {
     if (text) {
       const newData = vehicleData.filter((item) => {
-        const itemData = item ? item.nome.toLowerCase() : ''.toLowerCase();
+        const itemData = item ? item.nome.toLowerCase() : "".toLowerCase();
         const textData = text.toLowerCase();
         return itemData.match(textData);
-      })
+      });
       setFilterItem(newData);
     } else {
-      setFilterItem(vehicleData)
+      setFilterItem(vehicleData);
     }
-  }
+  };
 
-  function handleModel(item: string) {
-    model === '' ? setModel(item) : setModel('');
-  }
+  const handleModel = (item: string) => {
+    model === "" ? setModel(item) : setModel("");
+  };
 
-  function handleGoBack() {
+  const handleGoBack = () => {
     navigation.goBack();
-  }
+  };
 
-  function handleModelSelected(item: string) {
-    if (item === '') {
-      setModel('')
+  const handleModelSelected = (item: string) => {
+    if (item === "") {
+      setModel("");
       return setSelectModel(item);
     } else if (item === selectModel) {
-      return setSelectModel('')
+      return setSelectModel("");
     }
-    setModel(item)
+    setModel(item);
     return setSelectModel(item);
-  }
+  };
 
   useEffect(() => {
-    setFilterItem(vehicleData)
+    setFilterItem(vehicleData);
   }, [vehicleData]);
 
   useEffect(() => {
-    load(replaceCase(params.vehicleBreadcrumb), params.codeBrandVehicle)
-  }, [])
+    load(replaceCase(params.categoria), params.idMarca);
+  }, []);
 
   useEffect(() => {
-    if (model !== '') {
-      setDisabled(false)
+    if (model !== "") {
+      setDisabled(false);
     } else {
-      setDisabled(true)
+      setDisabled(true);
     }
   }, [handleModel]);
 
@@ -89,95 +110,116 @@ export function VehicleModel() {
     <Background>
       <ScrollView showsVerticalScrollIndicator={false}>
         <Breadcrumb
-          titleBreadcrumb={params.titleBreadcrumb}
-          vehicleBreadcrumb={params.vehicleBreadcrumb}
-          brandBreadcrumb={params.brandBreadcrumb.nome && params.brandBreadcrumb.nome}
-          marginLeft={20}
-          marginBottom={35}
+          titleBreadcrumb={params.titulo}
+          categoryBreadcrumb={params.categoria}
+          brandBreadcrumb={params.Marca && toTitleCase(params.Marca)}
         />
 
-        <View style={{ marginHorizontal: 22 }}>
-          <TextSemiBold fontSize={17} >
+        <View style={{ marginHorizontal: widthPercentageToDP(5) }}>
+          <TextSemiBold fontSize={FontSize(17)} textShadow>
             Selecione o modelo do veiculo
           </TextSemiBold>
         </View>
 
-        <View style={{ marginTop: '7%', marginBottom: '10%', marginHorizontal: '5%' }}>
+        <SearchContent>
           <SearchBar
-            title='Pesquisar modelo do veiculo'
+            title="Pesquisar modelo do veiculo"
             data={vehicleData}
             onChangeText={handleSearchFilter}
           />
-        </View>
+        </SearchContent>
 
-        {
-          loading
-            ?
-            <ActivityIndicator
-              size="large"
-              color={theme.colors.primary}
-              style={{ flex: 1 }}
+        {loading ? (
+          <ModelVehicle>
+            <FlatList
+              data={[1, 2, 3, 4]}
+              nestedScrollEnabled={true}
+              numColumns={1}
+              showsVerticalScrollIndicator={false}
+              renderItem={({ item }) => (
+                <ShimmerPlaceholder
+                  style={{ borderRadius: widthPercentageToDP(3), flex: 1 }}
+                  shimmerStyle={{
+                    height: widthPercentageToDP(12),
+                    marginBottom: widthPercentageToDP(3.5),
+                    width: "100%",
+                    borderWidth: 1,
+                    borderColor: secondary,
+                  }}
+                  shimmerColors={[secondary_load, secondary, secondary_load]}
+                  stopAutoRun={false}
+                  visible={loadingVisible}
+                >
+                  <View style={{ width: "100%" }}>
+                    <ButtonAdd title={""} />
+                  </View>
+                </ShimmerPlaceholder>
+              )}
             />
-            :
-            <KeyboardAvoidingView
-              style={{ flex: 1 }}
-              behavior={Platform.OS === "ios" ? "padding" : "height"}
-            >
-
+          </ModelVehicle>
+        ) : (
+          <KeyboardAvoidingView
+            style={{ flex: 1 }}
+            behavior={Platform.OS === "ios" ? "padding" : "height"}
+          >
+            <ModelVehicle>
               <FlatList
                 data={filterItem}
                 keyExtractor={(item) => String(item.codigo)}
                 numColumns={1}
                 showsVerticalScrollIndicator={false}
-
                 renderItem={({ item }) => (
-                  <View style={{ width: '100%' }}>
+                  <View style={{ width: "100%" }}>
                     <ButtonAdd
-                      style={{ marginHorizontal: 22 }}
+                      style={{ marginHorizontal: widthPercentageToDP(1.2) }}
                       key={item.codigo}
                       title={toTitleCase(item.nome)}
                       color={theme.colors.heading}
                       onPress={() => {
-                        handleModel(item)
-                        handleModelSelected(item.codigo)
-                        setCodeModel(item.codigo)
-                        setModelData(item)
+                        handleModel(item);
+                        handleModelSelected(item.codigo);
+                        setIdModel(item.codigo);
+                        setModelData(item);
+                        setModelName(item.nome);
                       }}
                       selected={item.codigo === selectModel}
                     />
                   </View>
                 )}
               />
-
-            </KeyboardAvoidingView>
-        }
+            </ModelVehicle>
+          </KeyboardAvoidingView>
+        )}
       </ScrollView>
       <Footer>
         <Button
           background={theme.colors.primary}
-          style={{ width: '46%' }}
+          style={{ width: "46%" }}
           onPress={handleGoBack}
         >
-          <TextBold fontSize={18} color={theme.colors.heading}>
-            Voltar
+          <TextBold fontSize={FontSize(16)} color={theme.colors.heading}>
+            VOLTAR
           </TextBold>
         </Button>
-        <View style={{ marginHorizontal: '4%' }} />
+        <View style={{ marginHorizontal: "4%" }} />
         <Button
           background={theme.colors.primary}
           disabled={disabled}
-          style={{ width: '46%' }}
-          onPress={() => navigation.navigate('YearVehicle', {
-            titleBreadcrumb: params.titleBreadcrumb,
-            vehicleBreadcrumb: params.vehicleBreadcrumb,
-            brandBreadcrumb: params.brandBreadcrumb,
-            modelBreadcrumb: modelData,
-            codeModel: codeModel,
-            codeBrandVehicle: params.codeBrandVehicle
-          })}
+          style={{ width: "46%" }}
+          onPress={() =>
+            navigation.navigate("YearVehicle", {
+              titulo: params.titulo,
+              categoria: params.categoria,
+              Marca: params.Marca,
+              Modelo: modelName,
+              idMarca: params.idMarca,
+              idModelo: idModel,
+              modelData: modelData,
+            })
+          }
         >
-          <TextBold fontSize={18} color={theme.colors.heading}>
-            Pŕoximo
+          <TextBold fontSize={FontSize(16)} color={theme.colors.heading}>
+            PRÓXIMO
           </TextBold>
         </Button>
       </Footer>

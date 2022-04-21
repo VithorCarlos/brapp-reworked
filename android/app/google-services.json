@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "603424361070",
+    "firebase_url": "https://brapp-bd9ef-default-rtdb.firebaseio.com",
+    "project_id": "brapp-bd9ef",
+    "storage_bucket": "brapp-bd9ef.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:603424361070:android:c2ff5c950917064ea1347f",
+        "android_client_info": {
+          "package_name": "com.brapptutobr.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "603424361070-0qu7b002ljun90vp6kmfoe3tvcdceqh8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwE75QzU0bmJo1FbuH6dIGwgsgFrrCo_I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "603424361070-0qu7b002ljun90vp6kmfoe3tvcdceqh8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

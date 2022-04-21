@@ -1,7 +1,7 @@
 import { View } from "react-native";
 import { getBottomSpace } from "react-native-iphone-x-helper";
 import styled from "styled-components";
-import { width, height } from '../../global/styles/responsive';
+import { width, height } from "../../global/styles/responsive";
 
 export const VehicleYear = styled(View)`
   margin-top: 10%;
@@ -16,5 +16,4 @@ export const Footer = styled(View)`
   align-items: center;
   align-self: center;
   justify-content: space-between;
-  
 `;
